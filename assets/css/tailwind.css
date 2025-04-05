@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Ponomar';
+    src: url('~/assets/fonts/Ponomar-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+body {
+  @apply bg-gradient-to-br from-gray-900 via-purple-950 to-gray-900 text-gray-100;
+  font-family: 'Ponomar';
+}
+
+/* Стили для Leaflet */
+@import 'leaflet/dist/leaflet.css';
+
+/* Убираем резкие углы и добавляем тень */
+.card {
+  @apply bg-gradient-to-br from-purple-900 to-purple-800 rounded-xl shadow-lg p-6;
+}
+
+input, select, textarea {
+  @apply bg-gradient-to-r from-purple-800 to-purple-700 text-gray-100 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+button {
+  @apply bg-gradient-to-r from-purple-600 to-purple-500 text-white rounded-lg p-3 hover:from-purple-700 hover:to-purple-600 transition-all;
+}
